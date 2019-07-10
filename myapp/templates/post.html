@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>게시판</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+
+  <!--base.html으로 로고, nav 넣기-->
+
+  <body>
+    <div class="container">
+        <header class="blog-header py-3">
+          <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+              <a class="text-muted" href="{%url 'home'%}"><img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/61146465_2707254312682873_6836619136638910464_n.jpg?_nc_cat=102&_nc_ht=scontent-icn1-1.xx&oh=65f0de25fc430618ef3da8408e4f3b2c&oe=5D6286F4" width="90" height="70"></a>
+            </div>
+            <div class="col-4 text-center">
+              <a class="blog-header-logo text-dark" href="{%url 'home'%}"><img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/61082517_2707254306016207_549443793103880192_n.jpg?_nc_cat=105&_nc_ht=scontent-icn1-1.xx&oh=10fe92140283d8da6ccffcee393c7472&oe=5D676987"></a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <a class="text-muted" href="#">
+                  <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+              </a>
+              <a class="btn btn-sm btn-outline-secondary" href="{% url 'login' %}">LOGIN</a>
+            </div>
+          </div>
+        </header>
+        <hr>
+        <div class="nav-scroller py-1 mb-2">
+          <nav class="nav d-flex justify-content-between">
+            <a class="p-2 text-muted" href="#">영화</a>
+            <a class="p-2 text-muted" href="#">게임</a>
+            <a class="p-2 text-muted" href="#">시사</a>
+            <a class="p-2 text-muted" href="#">브이로그</a>
+            <a class="p-2 text-muted" href="#">음악</a>
+            <a class="p-2 text-muted" href="#">육아</a>
+            <a class="p-2 text-muted" href="#">요리</a>
+            <a class="p-2 text-muted" href="#">테크</a>
+            <a class="p-2 text-muted" href="#">리액션</a>
+          </nav>
+        </div>
+  <main role="main">
+  <div class="container marketing">
+    <br>
+    <!-- 첨부파일 & 유투버 소개 글 -->
+    <hr class="featurette-divider">
+    <img src="" width="100%" height="500">
+    <hr class="featurette-divider">
+    <div class="row">
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <br>
+          <h2>뽀글머리 최인수</h2>
+          <p>강남대학교 멋쟁이사자처럼 7기 운영진</p>
+          <p><a class="btn btn-secondary" href="#" role="button">더 자세히 보기 &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <hr class="featurette-divider">
+      <br>
+    <h2 class="featurette-heading">신입 유투버 입니다 <span class="text-muted">브이로그|먹방|v-log</span></h2>
+    <p class="lead">처음으로 장고로 프로젝트를 만들어봤습니다 하하..</p>
+  </div><!-- /.container -->
+
+
+  <!--댓글 구현-->
+
+  <div class="my-3 p-3 bg-white rounded shadow-sm">
+      <h6 class="border-bottom border-gray pb-2 mb-0">댓글</h6>
+      <br>
+      <tbody>
+          <form action="write_ok.jsp" method="post" encType="multiplart/form-data">
+              <tr>
+                  <td colspan="2">
+                    <td><textarea cols="139" placeholder="내용을 입력하세요. " name="content" ></textarea></td>
+                    <td><input type="button" value="등록" onclick="sendData()" /></td>
+                  </td>
+              </tr>
+          </form>
+      </tbody>
+      <div class="media text-muted pt-3">
+        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <strong class="text-gray-dark">양경모</strong>
+            <a href="#">Follow</a>
+          </div>
+          <span class="d-block">너무 맛없게 먹어서 입맛이 떨어졌지 뭐야...</span>
+        </div>
+      </div>
+      <div class="media text-muted pt-3">
+        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <strong class="text-gray-dark">Full Name</strong>
+            <a href="#">Follow</a>
+          </div>
+          <span class="d-block">@username</span>
+        </div>
+      </div>
+      <div class="media text-muted pt-3">
+        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+        <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <strong class="text-gray-dark">Full Name</strong>
+            <a href="#">Follow</a>
+          </div>
+          <span class="d-block">@username</span>
+        </div>
+      </div>
+      <small class="d-block text-right mt-3">
+        <a href="#">All suggestions</a>
+      </small>
+    </div>
+ 
+
+
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
+</html>
