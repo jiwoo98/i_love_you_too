@@ -25,11 +25,11 @@ def login(request):
         #auth.authenticate 라는 말은 DB에서 방금전에 입력한 이 내용이 우리한테 있는 회원명단이 맞는지 확인시켜주는 함수
         user = auth.authenticate(request, username=username, password=password)
 
-        if user is not None:    # is not None = None이 아니라면 = 회원이라면
-            auth.login(request,user)
-            return redirect('home')
-        else:
-            return render(request, 'login.html', {'error': 'username or password is incorrect'})
+       #if user is not None:    
+       #     auth.login(request,user)
+       #     return redirect('home')
+       # else:
+       #     return render(request, 'login.html', {'error': 'username or password is incorrect'})
     else:
         return render(request, 'login.html')
 
